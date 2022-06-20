@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package UDP;
+
+enum UdpPacketType
+{
+	MSG_CONFITM  = 0;	// ACK or Heartbeat. 【ACK或心跳包】
+	MSG_NEED_ACK = 1;	// Packet with request, and need server ACK. 【需要服务器ACK的数据包】
+};
+
+enum MsgConfirmType
+{
+	MSG_ACK       = 0;	// ACK for other end.【发往另一端的ACK】
+	MSG_HEARTBEAT = 1;	// Heartbeat packet.【发往另一端的心跳包】
+};
+
+enum UdpErrorType
+{
+	INVALID_TYPE = 0;
+	NEED_RELOGIN = 1;
+}
+
+message MsgSession
+{
+	fixed64 session = 1;
+	fixed32 check   = 2;
+	uint32  index   = 3;
+}
+
+message MsgDataHead
+{
+	uint32 packet_type  = 1;
+	uint32 confirm_type = 2;
+	uint32 ack_index    = 3;
+	uint32 msg_index    = 4;
+}
+
