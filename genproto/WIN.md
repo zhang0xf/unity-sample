@@ -12,10 +12,10 @@ Unity protobuf demo on WIN
 * download source `protobuf-csharp-3.17.3.tar.gz`
 * use visual studio open `\protobuf-3.17.3\csharp\src\Google.Protobuf.sln`
 * set Google.Protobuf as default and build `DLL`
-![image_text](https://github.com/zhang0xf/unitydemo/blob/main/image/image1.png)
-![image_text](https://github.com/zhang0xf/unitydemo/blob/main/image/image2.PNG)
+![image_text](https://github.com/zhang0xf/unitydemo/blob/main/genproto/image/image1.png)
+![image_text](https://github.com/zhang0xf/unitydemo/blob/main/genproto/image/image2.PNG)
 * all files in `\protobuf-3.17.3\csharp\src\Google.Protobuf\bin\Release\net45` are needed, copy them to `Assets/Plugins`.
-![image_text](https://github.com/zhang0xf/unitydemo/blob/main/image/image3.PNG)
+![image_text](https://github.com/zhang0xf/unitydemo/blob/main/genproto/image/image3.PNG)
 
 ## Use protoc to compile .proto files
 
